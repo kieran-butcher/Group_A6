@@ -15,28 +15,27 @@ WHITE = [255, 255, 255]
 
 
 class robot():
-   def __init__(self, colour):
-      self.colour = colour
-      '''self.width = width
-      self.height = height '''     
+    def __init__(self, colour):
+        
+        self.colour = colour
+        self.width = width
+        self.height = height    
        
-   def set_pos(self):
-      self.rect.y = random.randrange(300, 20)
-      self.rect.x = random.randrange(0, 100)
+    def set_pos(self):
+        self.rect.y = random.randrange(300, 20)
+        self.rect.x = random.randrange(0, 100)
 
-   def spawnRobot(self):
-      rect = pygame.draw.rect(screen, self.colour, (100, 50, 20, 20), 0)
+    def spawnRobot(self):
+        rect = pygame.draw.rect(screen, self.colour, (100, 50, 20, 20), 0)
                                                     
 class landmark(pygame.sprite.Sprite):
     def __init__(self, colour, width, height, treasure):
-      pygame.sprite.Sprite.__init__(self)
+        pygame.sprite.Sprite.__init__(self)
 
 while True:
-   screen.fill(WHITE)
-   r1 = robot(BLACK)
-   r1.spawnRobot()
+    screen.fill(WHITE)
+    r1 = robot(BLACK)
+    r1.spawnRobot()
 
-   pygame.draw.rect(screen, BLACK, r1.spawnRobot.rect)
-   pygame.display.update()
-   pygame.display.flip()
-   mainClock.tick(60)
+    pygame.display.update()
+    pygame.display.flip()
